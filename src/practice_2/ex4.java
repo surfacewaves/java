@@ -1,29 +1,21 @@
 package practice_2;
 
 public class ex4 {
-    public static void main (String args[]) {
-        Dog dog = new Dog("Eren", 2);
-
-        /*String name = dog.getName();
-        int age = dog.getAge();
-        System.out.println(name);
-        System.out.println(age);*/
-
-        int humanAge = dog.humanAge();
-        System.out.printf("В человеческом возрасте: %d", humanAge);
-
-        System.out.println("\n" + dog.toString());
-    }
 }
 
 class Dog {
     private String name;
     private int age;
     {
-        name = "mikasa";
-        age = 1;
+        name = "none";
+        age = 0;
     }
-    Dog() {}
+    Dog() {
+
+    }
+    Dog(String name) {
+        this.name = name;
+    }
     Dog(String name, int age) {
         this.name = name;
         this.age = age;
@@ -31,11 +23,11 @@ class Dog {
     void setName(String name) {
         this.name = name;
     }
-    void setAge(int age) {
-        this.age = age;
-    }
     String getName() {
         return name;
+    }
+    void setAge(int age) {
+        this.age = age;
     }
     int getAge() {
         return age;
